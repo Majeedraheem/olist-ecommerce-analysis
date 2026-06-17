@@ -59,13 +59,9 @@ The dataset contains information on approximately **100,000 e-commerce orders** 
 ```text
 olist-ecommerce-analysis/
 ├── data/
-│   ├── raw/
-│   └── processed/
 ├── notebooks/
-├── sql/
-├── images/
+│   └── Olist_Notebook_Portfolio_Final.ipynb
 ├── README.md
-├── requirements.txt
 └── .gitignore
 ```
 
