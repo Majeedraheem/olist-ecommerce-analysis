@@ -55,15 +55,18 @@ The dataset contains information on approximately **100,000 e-commerce orders** 
 ---
 
 ## 📁 Project Structure
-
-```text
 olist-ecommerce-analysis/
+│
 ├── data/
 ├── notebooks/
-│   └── Olist_Notebook_Portfolio_Final.ipynb
+│   ├── 01_data_cleaning_eda.ipynb
+│   ├── 02_sql_analysis.ipynb
+│   ├── 03_rfm_analysis.ipynb
+│   └── 04_market_basket_analysis.ipynb
+│
+├── images/
 ├── README.md
-└── .gitignore
-```
+└── requirements.txt
 
 ---
 
@@ -112,6 +115,29 @@ Key segments identified:
 * High-value customers
 * At-risk customers
 * Inactive customers
+### 5. RFM Customer Segmentation
+
+Customers were segmented using the RFM framework:
+
+- **Recency (R):** Days since the customer's last purchase
+- **Frequency (F):** Total number of completed orders
+- **Monetary (M):** Total customer spending
+
+RFM scores were calculated using quartile-based ranking and combined to create customer segments.
+
+Key segments identified:
+
+- Champions
+- Loyal Customers
+- Potential Loyalists
+- At Risk
+- Lost Customers
+
+Business applications:
+
+- Loyalty campaigns for high-value customers
+- Win-back campaigns for inactive customers
+- Personalized promotions based on customer behavior
 
 ### 6. Market Basket Analysis
 
@@ -185,7 +211,7 @@ jupyter notebook
 
 **Abdulmajeed Abdulraheem**
 
-**Data Analyst | Business Consultant | Python | SQL | Power BI**
+**Data Analyst | Business Consultant | Python | SQL | Tableau**
 
 * GitHub: https://github.com/Majeedraheem
 * LinkedIn: *Add your LinkedIn profile URL here*
