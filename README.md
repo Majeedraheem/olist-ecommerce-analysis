@@ -148,6 +148,19 @@ Association rule mining was used to identify products frequently purchased toget
 * Personalized recommendations
 
 ---
+### Key Findings
+
+- Approximately 99% of orders contained products from a single category.
+- Cross-category purchasing behavior was limited.
+- The strongest product category combination was `bed_bath_table` and `furniture_decor`.
+- Lift scores below 1 indicated weak cross-selling opportunities at the category level.
+
+### Recommendations
+
+- Focus cross-selling efforts within categories.
+- Explore product-level Market Basket Analysis.
+- Combine RFM segmentation with recommendation strategies.
+- Analyze repeat purchases over time to identify sequential buying behavior.
 
 ## 💡 Key Insights
 
