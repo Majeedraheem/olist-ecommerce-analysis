@@ -63,6 +63,7 @@ olist-ecommerce-analysis/
 │   ├── 02_sql_analysis.ipynb
 │   ├── 03_rfm_analysis.ipynb
 │   └── 04_market_basket_analysis.ipynb
+|   |__ 05_cutomer_lifetime_value.ipynp
 │
 ├── images/
 ├── README.md
@@ -101,20 +102,7 @@ olist-ecommerce-analysis/
 * Delivery impact on ratings
 * Negative review analysis
 
-### 5. RFM Customer Segmentation
 
-Customers were segmented based on:
-
-* **Recency**
-* **Frequency**
-* **Monetary Value**
-
-Key segments identified:
-
-* Loyal customers
-* High-value customers
-* At-risk customers
-* Inactive customers
 ### 5. RFM Customer Segmentation
 
 Customers were segmented using the RFM framework:
@@ -181,6 +169,23 @@ Association rule mining was used to identify products frequently purchased toget
 * Optimize inventory for top-performing categories.
 
 ---
+### 7. Customer Lifetime Value (CLV) Analysis
+
+- Calculated customer-level revenue metrics using `customer_unique_id`
+- Measured customer lifespan, average order value, and purchase frequency
+- Computed historical customer lifetime value (CLV)
+- Segmented customers into Low Value, Mid Value, High Value, and VIP groups
+- Identified high-value customers and spending patterns.
+
+## Key Findings
+
+### Customer Lifetime Value (CLV)
+
+- Average customer lifetime value was $165.20.
+- Customer spending was highly right-skewed.
+- VIP customers generated significantly more revenue than other segments.
+- Higher CLV was driven primarily by larger order values rather than repeat purchases.
+- Most customers placed only one order during the analysis period.
 
 ## 🚀 Getting Started
 
