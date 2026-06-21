@@ -60,10 +60,10 @@ olist-ecommerce-analysis/
 ├── data/
 ├── notebooks/
 │   ├── 01_data_cleaning_eda.ipynb
-│   ├── 02_sql_analysis.ipynb
-│   ├── 03_rfm_analysis.ipynb
-│   └── 04_market_basket_analysis.ipynb
-|   |__ 05_cutomer_lifetime_value.ipynp
+│   ├── 02_rfm_analysis.ipynb
+│   └── 03_market_basket_analysis.ipynb
+|   |__ 04_cutomer_lifetime_value.ipynp
+|
 │
 ├── images/
 ├── README.md
@@ -186,6 +186,34 @@ Association rule mining was used to identify products frequently purchased toget
 - VIP customers generated significantly more revenue than other segments.
 - Higher CLV was driven primarily by larger order values rather than repeat purchases.
 - Most customers placed only one order during the analysis period.
+
+##### 5. Funnel Analysis
+
+Analyzed the end-to-end order fulfillment process to identify operational bottlenecks and measure delivery performance.
+
+Key analyses included:
+
+- Purchase-to-delivery conversion rates
+- Stage-by-stage funnel drop-off analysis
+- Approval, shipping, and delivery lead times
+- Actual vs. estimated delivery comparison
+- Delivery performance by state
+- Delivery performance by product category
+- Impact of delivery delays on customer review scores
+
+## Key Findings
+* The purchase-to-delivery conversion rate was 97.02%.
+* Delivery accounted for approximately 73% of total fulfillment time.
+* 93.15% of orders were delivered on time or earlier than promised.
+* Late deliveries received significantly lower review scores (2.27 vs. 4.29).
+* Delivery performance varied across states and product categories.
+
+## 📈 Business Recommendations
+* Optimize warehouse operations between approval and shipment.
+* Improve delivery performance in high-delay regions.
+* Implement region-specific delivery estimates.
+* Monitor high-risk product categories with elevated late-delivery rates.
+
 
 ## 🚀 Getting Started
 
