@@ -2,254 +2,150 @@
 
 ## 📊 Project Overview
 
-This project analyzes the **Olist Brazilian E-Commerce Dataset** to uncover insights into customer behavior, sales performance, delivery efficiency, and customer satisfaction.
+This project analyzes the Olist Brazilian E-Commerce Dataset to uncover insights into customer behavior, sales performance, delivery efficiency, and customer satisfaction.
 
-The analysis combines **SQL, Python, exploratory data analysis (EDA), customer segmentation, and business intelligence techniques** to generate actionable business recommendations.
+The analysis combines SQL, Python, exploratory data analysis (EDA), customer segmentation, and business intelligence techniques to generate actionable business recommendations.
 
 ---
 
 ## 🎯 Business Objectives
 
-* Analyze sales trends and revenue performance
-* Identify top-performing product categories
-* Evaluate delivery efficiency and delays
-* Understand customer satisfaction drivers
-* Explore regional purchasing patterns
-* Segment customers using **RFM Analysis**
-* Discover cross-selling opportunities through **Market Basket Analysis**
+- Analyze sales trends and revenue performance
+- Identify top-performing product categories
+- Evaluate delivery efficiency and delays
+- Understand customer satisfaction drivers
+- Explore regional purchasing patterns
+- Segment customers using RFM Analysis
+- Calculate Customer Lifetime Value (CLV)
+- Discover cross-selling opportunities through Market Basket Analysis
 
 ---
 
 ## 🗂️ Dataset Description
 
-The dataset contains information on approximately **100,000 e-commerce orders** placed between **2016 and 2018** across multiple marketplaces in Brazil.
+The dataset contains approximately 100,000 e-commerce orders placed between 2016 and 2018 across Brazil.
 
 ### Main Tables
 
-* `customers`
-* `orders`
-* `order_items`
-* `payments`
-* `products`
-* `reviews`
-* `sellers`
-* `geolocation`
+- customers
+- orders
+- order_items
+- payments
+- products
+- reviews
+- sellers
+- geolocation
 
-**Source:** Olist Brazilian E-Commerce Public Dataset
+Source: Olist Brazilian E-Commerce Public Dataset
 
 ---
 
 ## 🛠️ Tools & Technologies
 
-* **Python**
-* **SQL**
-* **Jupyter Notebook**
-* **Pandas**
-* **NumPy**
-* **Matplotlib**
-* **Seaborn**
-* **Plotly**
-* **Scikit-learn**
-* **Git & GitHub**
+- Python
+- SQL
+- Jupyter Notebook
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Plotly
+- Scikit-learn
+- Git & GitHub
 
 ---
 
 ## 📁 Project Structure
+
+```text
 olist-ecommerce-analysis/
 │
 ├── data/
 ├── notebooks/
 │   ├── 01_data_cleaning_eda.ipynb
-│   ├── 02_rfm_analysis.ipynb
-│   └── 03_market_basket_analysis.ipynb
-|   |__ 04_cutomer_lifetime_value.ipynp
-|
+│   ├── 02_sql_analysis.ipynb
+│   ├── 03_rfm_analysis.ipynb
+│   ├── 04_funnel_analysis.ipynb
+│   ├── 05_market_basket_analysis.ipynb
+│   └── 06_customer_lifetime_value.ipynb
 │
 ├── images/
 ├── README.md
 └── requirements.txt
+```
 
 ---
 
 ## 🔍 Analysis Performed
 
 ### 1. Data Cleaning & Preparation
-
-* Handled missing values
-* Converted timestamp columns
-* Standardized data types
-* Removed duplicates
-* Validated data quality
+- Handled missing values
+- Converted timestamp columns
+- Standardized data types
+- Removed duplicates
+- Validated data quality
 
 ### 2. Exploratory Data Analysis (EDA)
+- Revenue analysis
+- Order trends
+- Customer distribution by state and city
+- Product category performance
+- Payment method analysis
 
-* Order volume trends
-* Revenue analysis
-* Payment methods
-* Customer distribution by state and city
-* Product category performance
+### 3. RFM Customer Segmentation
+- Recency, Frequency, and Monetary analysis
+- Customer segmentation
+- High-value customer identification
 
-### 3. Delivery Performance Analysis
+### 4. Funnel Analysis
+- Purchase-to-delivery conversion analysis
+- Delivery performance evaluation
+- Delivery delay analysis
+- State and product category delivery performance
+- Customer satisfaction impact
 
-* Delivery lead time analysis
-* Estimated vs. actual delivery comparison
-* Delayed order identification
-* Regional shipping performance
+### 5. Market Basket Analysis
+- Association rule mining
+- Product affinity analysis
+- Cross-selling opportunities
 
-### 4. Customer Satisfaction Analysis
-
-* Review score distribution
-* Delivery impact on ratings
-* Negative review analysis
-
-
-### 5. RFM Customer Segmentation
-
-Customers were segmented using the RFM framework:
-
-- **Recency (R):** Days since the customer's last purchase
-- **Frequency (F):** Total number of completed orders
-- **Monetary (M):** Total customer spending
-
-RFM scores were calculated using quartile-based ranking and combined to create customer segments.
-
-Key segments identified:
-
-- Champions
-- Loyal Customers
-- Potential Loyalists
-- At Risk
-- Lost Customers
-
-Business applications:
-
-- Loyalty campaigns for high-value customers
-- Win-back campaigns for inactive customers
-- Personalized promotions based on customer behavior
-
-### 6. Market Basket Analysis
-
-Association rule mining was used to identify products frequently purchased together to support:
-
-* Cross-selling strategies
-* Product bundling
-* Personalized recommendations
+### 6. Customer Lifetime Value (CLV)
+- Historical CLV calculation
+- Customer value segmentation
+- Revenue contribution analysis
 
 ---
-### Key Findings
-
-- Approximately 99% of orders contained products from a single category.
-- Cross-category purchasing behavior was limited.
-- The strongest product category combination was `bed_bath_table` and `furniture_decor`.
-- Lift scores below 1 indicated weak cross-selling opportunities at the category level.
-
-### Recommendations
-
-- Focus cross-selling efforts within categories.
-- Explore product-level Market Basket Analysis.
-- Combine RFM segmentation with recommendation strategies.
-- Analyze repeat purchases over time to identify sequential buying behavior.
 
 ## 💡 Key Insights
 
-* **São Paulo** generated the highest number of orders.
-* Delivery delays negatively impacted customer review scores.
-* A small group of customers generated a significant share of total revenue.
-* Customer purchasing behavior varied across regions.
-* Several product combinations showed strong cross-selling potential.
-
----
-
-## 📈 Business Recommendations
-
-* Improve logistics performance in high-delay regions.
-* Prioritize retention campaigns for high-value customers.
-* Personalize marketing using RFM segments.
-* Create product bundles based on market basket analysis.
-* Optimize inventory for top-performing categories.
-
----
-### 7. Customer Lifetime Value (CLV) Analysis
-
-- Calculated customer-level revenue metrics using `customer_unique_id`
-- Measured customer lifespan, average order value, and purchase frequency
-- Computed historical customer lifetime value (CLV)
-- Segmented customers into Low Value, Mid Value, High Value, and VIP groups
-- Identified high-value customers and spending patterns.
-
-## Key Findings
-
-### Customer Lifetime Value (CLV)
-
-- Average customer lifetime value was $165.20.
-- Customer spending was highly right-skewed.
-- VIP customers generated significantly more revenue than other segments.
-- Higher CLV was driven primarily by larger order values rather than repeat purchases.
+- São Paulo generated the highest number of orders.
+- Purchase-to-delivery conversion rate reached 97.02%.
+- 93.15% of orders were delivered on time or early.
+- Late deliveries significantly reduced review scores (2.27 vs. 4.29).
+- A small group of customers generated a significant share of total revenue.
+- Product purchasing patterns revealed cross-selling opportunities.
 - Most customers placed only one order during the analysis period.
 
-##### 5. Funnel Analysis
-
-Analyzed the end-to-end order fulfillment process to identify operational bottlenecks and measure delivery performance.
-
-Key analyses included:
-
-- Purchase-to-delivery conversion rates
-- Stage-by-stage funnel drop-off analysis
-- Approval, shipping, and delivery lead times
-- Actual vs. estimated delivery comparison
-- Delivery performance by state
-- Delivery performance by product category
-- Impact of delivery delays on customer review scores
-
-## Key Findings
-* The purchase-to-delivery conversion rate was 97.02%.
-* Delivery accounted for approximately 73% of total fulfillment time.
-* 93.15% of orders were delivered on time or earlier than promised.
-* Late deliveries received significantly lower review scores (2.27 vs. 4.29).
-* Delivery performance varied across states and product categories.
+---
 
 ## 📈 Business Recommendations
-* Optimize warehouse operations between approval and shipment.
-* Improve delivery performance in high-delay regions.
-* Implement region-specific delivery estimates.
-* Monitor high-risk product categories with elevated late-delivery rates.
 
-
-## 🚀 Getting Started
-
-### Clone the Repository
-
-```bash
-git clone git@github.com:Majeedraheem/olist-ecommerce-analysis.git
-```
-
-### Navigate to the Project Folder
-
-```bash
-cd olist-ecommerce-analysis
-```
-
-### Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Launch Jupyter Notebook
-
-```bash
-jupyter notebook
-```
+- Improve logistics performance in high-delay regions.
+- Optimize warehouse operations between approval and shipment.
+- Prioritize retention campaigns for high-value customers.
+- Personalize marketing using RFM segments.
+- Create product bundles based on market basket analysis.
+- Monitor delivery performance by state and product category.
 
 ---
 
 ## 🔮 Future Enhancements
 
-* Build an interactive Power BI dashboard
-* Develop customer lifetime value (CLV) models
-* Create sales forecasting models
-* Deploy dashboards with Streamlit
-* Automate ETL pipelines
+- Build an interactive Power BI dashboard
+- Develop predictive CLV models
+- Create sales forecasting models
+- Deploy dashboards with Streamlit
+- Automate ETL pipelines
 
 ---
 
@@ -257,8 +153,4 @@ jupyter notebook
 
 **Abdulmajeed Abdulraheem**
 
-**Data Analyst | Business Consultant | Python | SQL | Tableau**
-
-* GitHub: https://github.com/Majeedraheem
-* LinkedIn: *Add your LinkedIn profile URL here*
-# olist-ecommerce-analysis
+**Data Analyst | Business Consultant | Python | SQL**
