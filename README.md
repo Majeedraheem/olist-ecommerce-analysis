@@ -2,22 +2,40 @@
 
 ## 📊 Project Overview
 
-This project analyzes the Olist Brazilian E-Commerce Dataset to uncover insights into customer behavior, sales performance, delivery efficiency, and customer satisfaction.
+This project analyzes the Olist Brazilian E-Commerce Dataset to understand the key drivers of marketplace performance across customers, products, sellers, logistics operations, and customer satisfaction.
 
-The analysis combines SQL, Python, exploratory data analysis (EDA), customer segmentation, and business intelligence techniques to generate actionable business recommendations.
+The analysis combines Python, SQL, customer segmentation, funnel analysis, customer lifetime value (CLV), market basket analysis, and revenue forecasting to generate business insights and management recommendations.
 
 ---
 
-## 🎯 Business Objectives
+## 🎯 Business Problem
 
-- Analyze sales trends and revenue performance
-- Identify top-performing product categories
-- Evaluate delivery efficiency and delays
-- Understand customer satisfaction drivers
-- Explore regional purchasing patterns
-- Segment customers using RFM Analysis
-- Calculate Customer Lifetime Value (CLV)
-- Discover cross-selling opportunities through Market Basket Analysis
+The objective of this project was to answer several important business questions:
+
+- Which customers generate the highest business value?
+- Where are the operational bottlenecks in the fulfillment process?
+- What factors influence customer satisfaction?
+- Which products and regions drive marketplace growth?
+- How can customer retention and profitability be improved?
+- Can historical revenue trends be used to forecast future business performance?
+
+---
+
+## 📌 Executive Summary
+
+The purpose of this project was to analyze Olist's e-commerce marketplace and identify opportunities to improve revenue growth, customer retention, operational efficiency, and customer satisfaction.
+
+Throughout the analysis, I investigated customer purchasing behavior, seller performance, delivery operations, customer lifetime value, purchase funnels, market basket relationships, and future revenue trends.
+
+One of the strongest patterns observed was that revenue and customer value were highly concentrated among a relatively small group of customers. Customer segmentation analysis identified high-value customer groups that represent significant retention opportunities.
+
+The funnel analysis revealed that delivery performance has a direct impact on customer satisfaction. While most orders were delivered on time, delayed deliveries resulted in significantly lower review scores, highlighting the importance of operational efficiency.
+
+Market Basket Analysis showed limited category-level cross-selling opportunities, suggesting that future recommendation systems should focus on product-level relationships and personalized recommendations.
+
+Revenue forecasting identified a strong long-term growth trend and projected continued business expansion over the forecast horizon.
+
+Overall, the analysis demonstrates that customer retention, delivery performance, and revenue concentration are among the most important drivers of marketplace success.
 
 ---
 
@@ -27,14 +45,14 @@ The dataset contains approximately 100,000 e-commerce orders placed between 2016
 
 ### Main Tables
 
-- customers
-- orders
-- order_items
-- payments
-- products
-- reviews
-- sellers
-- geolocation
+- Customers
+- Orders
+- Order Items
+- Payments
+- Products
+- Reviews
+- Sellers
+- Geolocation
 
 Source: Olist Brazilian E-Commerce Public Dataset
 
@@ -50,6 +68,7 @@ Source: Olist Brazilian E-Commerce Public Dataset
 - Matplotlib
 - Seaborn
 - Plotly
+- Prophet
 - Scikit-learn
 - Git & GitHub
 
@@ -67,7 +86,8 @@ olist-ecommerce-analysis/
 │   ├── 03_rfm_analysis.ipynb
 │   ├── 04_funnel_analysis.ipynb
 │   ├── 05_market_basket_analysis.ipynb
-│   └── 06_customer_lifetime_value.ipynb
+│   ├── 06_customer_lifetime_value.ipynb
+│   └── 07_sales_forecasting.ipynb
 │
 ├── images/
 ├── README.md
@@ -78,64 +98,70 @@ olist-ecommerce-analysis/
 
 ## 🔍 Analysis Performed
 
-### 1. Data Cleaning & Preparation
-- Handled missing values
-- Converted timestamp columns
-- Standardized data types
-- Removed duplicates
-- Validated data quality
-
-### 2. Exploratory Data Analysis (EDA)
+### 1. Exploratory Data Analysis (EDA)
 - Revenue analysis
-- Order trends
-- Customer distribution by state and city
-- Product category performance
-- Payment method analysis
+- Sales trends
+- Product performance
+- Regional demand analysis
+- Customer behavior exploration
 
-### 3. RFM Customer Segmentation
-- Recency, Frequency, and Monetary analysis
+### 2. RFM Customer Segmentation
+- Recency, Frequency, Monetary analysis
 - Customer segmentation
 - High-value customer identification
 
-### 4. Funnel Analysis
+### 3. Funnel Analysis
 - Purchase-to-delivery conversion analysis
-- Delivery performance evaluation
-- Delivery delay analysis
-- State and product category delivery performance
-- Customer satisfaction impact
+- Delivery bottleneck identification
+- Customer satisfaction impact assessment
 
-### 5. Market Basket Analysis
+### 4. Market Basket Analysis
 - Association rule mining
 - Product affinity analysis
-- Cross-selling opportunities
+- Cross-selling opportunity evaluation
 
-### 6. Customer Lifetime Value (CLV)
+### 5. Customer Lifetime Value (CLV)
 - Historical CLV calculation
 - Customer value segmentation
-- Revenue contribution analysis
+- Revenue concentration analysis
+
+### 6. Revenue Forecasting
+- Historical revenue validation
+- Trend analysis
+- Growth analysis
+- Prophet forecasting model
+- Future revenue projections
 
 ---
 
-## 💡 Key Insights
+## 💡 Business Findings
 
-- São Paulo generated the highest number of orders.
-- Purchase-to-delivery conversion rate reached 97.02%.
-- 93.15% of orders were delivered on time or early.
-- Late deliveries significantly reduced review scores (2.27 vs. 4.29).
-- A small group of customers generated a significant share of total revenue.
-- Product purchasing patterns revealed cross-selling opportunities.
-- Most customers placed only one order during the analysis period.
+### Customer Value
+Customer spending was highly concentrated among a relatively small segment of customers, creating opportunities for targeted retention and loyalty initiatives.
+
+### Operations
+Delivery represented the largest portion of the fulfillment process and had the strongest influence on customer satisfaction outcomes.
+
+### Customer Experience
+Customers experiencing delivery delays reported significantly lower review scores, demonstrating a direct relationship between operational performance and customer experience.
+
+### Revenue Growth
+Historical revenue trends indicated strong marketplace growth and supported positive future revenue projections.
+
+### Cross-Selling
+Category-level purchasing behavior showed limited association strength, suggesting that personalized recommendations may provide greater business value than broad category-level promotions.
 
 ---
 
-## 📈 Business Recommendations
+## 📈 Management Recommendations
 
-- Improve logistics performance in high-delay regions.
-- Optimize warehouse operations between approval and shipment.
-- Prioritize retention campaigns for high-value customers.
-- Personalize marketing using RFM segments.
-- Create product bundles based on market basket analysis.
-- Monitor delivery performance by state and product category.
+1. Prioritize retention strategies for high-value customers.
+2. Improve logistics performance in regions with higher delivery delays.
+3. Monitor delivery performance as a key customer satisfaction KPI.
+4. Personalize marketing campaigns using customer segmentation insights.
+5. Develop product-level recommendation strategies rather than broad category promotions.
+6. Use forecasting outputs to support budgeting, staffing, and operational planning.
+7. Continuously monitor actual performance against forecasted revenue trends.
 
 ---
 
@@ -143,7 +169,7 @@ olist-ecommerce-analysis/
 
 - Build an interactive Power BI dashboard
 - Develop predictive CLV models
-- Create sales forecasting models
+- Automate forecasting updates
 - Deploy dashboards with Streamlit
 - Automate ETL pipelines
 
@@ -153,4 +179,4 @@ olist-ecommerce-analysis/
 
 **Abdulmajeed Abdulraheem**
 
-**Data Analyst | Business Consultant | Python | SQL**
+Data Analyst | Business Consultant | Python | SQL
